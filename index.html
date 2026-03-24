@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | OK WebStart - Web Development Agency</title>
+    <meta
+      name="description"
+      content="OK WebStart is a London-based web development agency. Strategy-driven development, conversion-focused design, and technology that scales. Future-forward digital for ambitious brands."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://okwebstart.com/" />
+    <meta name="theme-color" content="#010d5b" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Home | OK WebStart - Web Development Agency"
+    />
+    <meta
+      property="og:description"
+      content="Future-forward web development for ambitious brands. Strategy-driven development, conversion-focused design, and technology that scales."
+    />
+    <meta
+      property="og:image"
+      content="https://okwebstart.com/assets/imgs/og-home.jpg"
+    />
+    <meta property="og:url" content="https://okwebstart.com/" />
+    <meta property="og:site_name" content="OK WebStart" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Home | OK WebStart - Web Development Agency"
+    />
+    <meta
+      name="twitter:description"
+      content="Future-forward web development for ambitious brands."
+    />
+    <meta
+      name="twitter:image"
+      content="https://okwebstart.com/assets/imgs/og-home.jpg"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://okwebstart.com/#website",
+            "url": "https://okwebstart.com/",
+            "name": "OK WebStart",
+            "description": "Future-forward web development for ambitious brands."
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://okwebstart.com/#organization",
+            "name": "OK WebStart",
+            "url": "https://okwebstart.com/",
+            "logo": "https://okwebstart.com/assets/imgs/LOGO-HEADER.png",
+            "foundingDate": "2024",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "London",
+              "addressCountry": "GB"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+44-1234-567890",
+              "email": "hello@okwebstart.com",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/okwebstart",
+              "https://instagram.com/okwebstart",
+              "https://x.com/okwebstart",
+              "https://dribbble.com/okwebstart"
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://okwebstart.com/#webpage",
+            "url": "https://okwebstart.com/",
+            "name": "Home | OK WebStart - Web Development Agency",
+            "isPartOf": { "@id": "https://okwebstart.com/#website" },
+            "about": { "@id": "https://okwebstart.com/#organization" },
+            "description": "OK WebStart homepage — web development, UX/UI design, SEO, e-commerce, brand strategy."
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://okwebstart.com/#service",
+            "name": "OK WebStart",
+            "description": "Web development agency specialising in Next.js, React, UX/UI design, SEO, and e-commerce solutions for ambitious brands.",
+            "areaServed": "GB",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "London",
+              "addressCountry": "GB"
+            },
+            "telephone": "+44-1234-567890",
+            "email": "hello@okwebstart.com",
+            "url": "https://okwebstart.com/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Cursor glow (injected by JS on desktop) -->
+
+    <!-- ============================================================
+       FLOATING HEADER
+  ============================================================ -->
+    <header id="siteHeader" role="banner">
+      <div class="header-inner">
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="OK WebStart - return to homepage"
+        >
+          <img src="assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
+        </a>
+        <nav class="header-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="pages/services.html" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Work</a>
+          <a href="pages/about.html" class="nav-link">About</a>
+          <a href="pages/contact.html" class="nav-link">Contact</a>
+        </nav>
+        <a
+          href="pages/contact.html"
+          class="btn btn-accent btn-sm header-cta"
+          aria-label="Start a project with OK WebStart"
+          >Start a Project</a
+        >
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileDrawer"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============================================================
+       MOBILE NAV DRAWER
+  ============================================================ -->
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+    <nav
+      id="mobileDrawer"
+      class="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation menu"
+    >
+      <button
+        class="drawer-close"
+        id="drawerClose"
+        aria-label="Close navigation menu"
+      >
+        &#x2715;
+      </button>
+      <ul class="drawer-nav" role="list">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="pages/services.html" class="drawer-link">Services</a></li>
+        <li><a href="#portfolio" class="drawer-link">Work</a></li>
+        <li><a href="pages/about.html" class="drawer-link">About</a></li>
+        <li><a href="pages/contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+      <a href="pages/contact.html" class="btn btn-accent btn-lg drawer-cta"
+        >Start a Project</a
+      >
+    </nav>
+
+    <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+    <main role="main">
+      <!-- ── HERO ─────────────────────────────────────────────── -->
+      <section class="hero section" id="hero" aria-labelledby="heroHeading">
+        <!-- Background decorations -->
+        <div class="hero-bg" aria-hidden="true">
+          <div class="bg-grid"></div>
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              Web Development Agency · Est. 2024
+            </p>
+            <h1 id="heroHeading">
+              We Build Digital<br />
+              Experiences Designed To<br />
+              <span class="text-gradient-green">Sell.</span>
+            </h1>
+            <p class="hero-sub">
+              Strategy-driven development. Design that converts. Technology that
+              scales. OK WebStart turns bold visions into high-performance
+              digital realities.
+            </p>
+            <div class="hero-ctas">
+              <a href="#portfolio" class="btn btn-accent btn-lg"
+                >See Our Work</a
+              >
+              <a href="pages/contact.html" class="btn btn-outline btn-lg"
+                >Get in Touch</a
+              >
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+              <div class="scroll-line">
+                <div class="scroll-dot"></div>
+              </div>
+              <span>Scroll</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MARQUEE TICKER ─────────────────────────────────────── -->
+      <div class="marquee-wrap" aria-hidden="true" role="presentation">
+        <div class="marquee-track">
+          <span>Web Development</span><span class="sep">&#x2736;</span>
+          <span>UX / UI Design</span><span class="sep">&#x2736;</span>
+          <span>SEO &amp; Growth</span><span class="sep">&#x2736;</span>
+          <span>E-Commerce</span><span class="sep">&#x2736;</span>
+          <span>Custom CMS</span><span class="sep">&#x2736;</span>
+          <span>Performance Audit</span><span class="sep">&#x2736;</span>
+          <span>Brand Strategy</span><span class="sep">&#x2736;</span>
+          <!-- Duplicate set for seamless loop -->
+          <span aria-hidden="true">Web Development</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">UX / UI Design</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">SEO &amp; Growth</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">E-Commerce</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">Custom CMS</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">Performance Audit</span
+          ><span class="sep" aria-hidden="true">&#x2736;</span>
+          <span aria-hidden="true">Brand Strategy</span>
+          <span class="sep" aria-hidden="true">&#x2736;</span>
+        </div>
+      </div>
+
+      <!-- ── SERVICES ───────────────────────────────────────────── -->
+      <section class="section" id="services" aria-labelledby="servicesHeading">
+        <div class="container">
+          <header class="section-header reveal-up">
+            <p class="eyebrow">What We Do</p>
+            <h2 id="servicesHeading">
+              Every pixel. Every line of code.<br />Purposefully crafted.
+            </h2>
+          </header>
+          <div class="services-grid">
+            <article
+              class="glass-card service-card reveal-up"
+              style="--delay: 0s"
+            >
+              <div class="service-icon" aria-hidden="true">&#x3C;/&#x3E;</div>
+              <h3>Web Development</h3>
+              <p>
+                Performant, scalable web applications built with modern
+                technologies and best practices.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Next.js</span><span class="tag">React</span>
+                <span class="tag">Node</span><span class="tag">Laravel</span>
+              </div>
+            </article>
+
+            <article
+              class="glass-card service-card reveal-up"
+              style="--delay: 0.1s"
+            >
+              <div class="service-icon" aria-hidden="true">&#x25C8;</div>
+              <h3>UX / UI Design</h3>
+              <p>
+                Interfaces that feel intuitive, look exceptional, and guide
+                users towards conversion.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Figma</span><span class="tag">Framer</span>
+                <span class="tag">Prototyping</span>
+              </div>
+            </article>
+
+            <article
+              class="glass-card service-card reveal-up"
+              style="--delay: 0.2s"
+            >
+              <div class="service-icon" aria-hidden="true">&#x2191;</div>
+              <h3>SEO &amp; Growth</h3>
+              <p>
+                Data-driven strategies that drive organic visibility, qualified
+                traffic, and sustained growth.
+              </p>
+            </article>
+
+            <article
+              class="glass-card service-card reveal-up"
+              style="--delay: 0.1s"
+            >
+              <div class="service-icon" aria-hidden="true">&#x229E;</div>
+              <h3>E-Commerce</h3>
+              <p>
+                Revenue-optimised online stores that convert browsers into
+                buyers, built for scale.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Shopify</span
+                ><span class="tag">WooCommerce</span>
+                <span class="tag">Headless</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROOF / AUTHORITY ──────────────────────────────────── -->
+      <section
+        class="section section--proof"
+        id="proof"
+        aria-labelledby="proofHeading"
+      >
+        <div class="container">
+          <div class="proof-text reveal-up">
+            <p class="eyebrow">Our Track Record</p>
+            <h2 id="proofHeading">Numbers that speak louder.</h2>
+            <div class="proof-cta-wrap">
+              <a href="pages/about.html" class="btn btn-outline"
+                >Learn About Us</a
+              >
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="glass-card stat-card reveal-up" style="--delay: 0s">
+              <span
+                class="stat-num text-gradient"
+                data-target="150"
+                data-suffix="+"
+                >0</span
+              >
+              <p class="stat-label">Projects Launched</p>
+            </div>
+            <div class="glass-card stat-card reveal-up" style="--delay: 0.1s">
+              <span
+                class="stat-num text-gradient"
+                data-target="98"
+                data-suffix="%"
+                >0</span
+              >
+              <p class="stat-label">Client Retention</p>
+            </div>
+            <div class="glass-card stat-card reveal-up" style="--delay: 0.2s">
+              <span
+                class="stat-num text-gradient"
+                data-target="40"
+                data-suffix="+"
+                >0</span
+              >
+              <p class="stat-label">Industries Served</p>
+            </div>
+            <div class="glass-card stat-card reveal-up" style="--delay: 0.3s">
+              <span
+                class="stat-num text-gradient"
+                data-target="5"
+                data-suffix="&#x2605;"
+                >0</span
+              >
+              <p class="stat-label">Avg. Client Rating</p>
+            </div>
+          </div>
+
+          <!-- Auto-scrolling logo strip -->
+          <div class="logo-strip-wrap reveal-up">
+            <div class="logo-strip-track">
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-1.svg" alt="Client 1" width="120" height="40" loading="lazy" /> -->
+                <span>Client 01</span>
+              </div>
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-2.svg" alt="Client 2" width="120" height="40" loading="lazy" /> -->
+                <span>Client 02</span>
+              </div>
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-3.svg" alt="Client 3" width="120" height="40" loading="lazy" /> -->
+                <span>Client 03</span>
+              </div>
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-4.svg" alt="Client 4" width="120" height="40" loading="lazy" /> -->
+                <span>Client 04</span>
+              </div>
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-5.svg" alt="Client 5" width="120" height="40" loading="lazy" /> -->
+                <span>Client 05</span>
+              </div>
+              <div class="logo-strip-item">
+                <!-- Replace with: <img src="assets/imgs/logo-client-6.svg" alt="Client 6" width="120" height="40" loading="lazy" /> -->
+                <span>Client 06</span>
+              </div>
+              <!-- Duplicates for seamless loop -->
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 01</span>
+              </div>
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 02</span>
+              </div>
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 03</span>
+              </div>
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 04</span>
+              </div>
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 05</span>
+              </div>
+              <div class="logo-strip-item" aria-hidden="true">
+                <span>Client 06</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROCESS ────────────────────────────────────────────── -->
+      <section class="section" id="process" aria-labelledby="processHeading">
+        <div class="container">
+          <header class="section-header reveal-up">
+            <p class="eyebrow">How We Work</p>
+            <h2 id="processHeading">
+              A process built for outcomes,<br />not outputs.
+            </h2>
+          </header>
+          <div class="process-steps">
+            <div class="process-step glass-card reveal-up" style="--delay: 0s">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3>Discover</h3>
+              <p>
+                Stakeholder interviews, competitor mapping, and goal alignment
+                to define what success looks like.
+              </p>
+            </div>
+            <div class="process-arrow" aria-hidden="true">&#x2192;</div>
+            <div
+              class="process-step glass-card reveal-up"
+              style="--delay: 0.1s"
+            >
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3>Design</h3>
+              <p>
+                Wireframes, prototypes, and pixel-perfect UI crafted to guide
+                users towards action.
+              </p>
+            </div>
+            <div class="process-arrow" aria-hidden="true">&#x2192;</div>
+            <div
+              class="process-step glass-card reveal-up"
+              style="--delay: 0.2s"
+            >
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3>Build</h3>
+              <p>
+                Agile sprints, clean architecture, and thorough testing for
+                robust, performant delivery.
+              </p>
+            </div>
+            <div class="process-arrow" aria-hidden="true">&#x2192;</div>
+            <div
+              class="process-step glass-card reveal-up"
+              style="--delay: 0.3s"
+            >
+              <span class="step-num" aria-hidden="true">04</span>
+              <h3>Launch &amp; Grow</h3>
+              <p>
+                Analytics, A/B testing, and continuous iteration to keep your
+                product ahead of the curve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PORTFOLIO PREVIEW ──────────────────────────────────── -->
+      <section
+        class="section"
+        id="portfolio"
+        aria-labelledby="portfolioHeading"
+      >
+        <div class="container">
+          <header class="section-header reveal-up">
+            <p class="eyebrow">Selected Work</p>
+            <h2 id="portfolioHeading">Projects we're proud of.</h2>
+          </header>
+
+          <div class="portfolio-grid">
+            <!-- Row 1 — Large card (2/3) + small card (1/3) -->
+            <!-- Replace with: <img src="assets/imgs/project-aurora.jpg" alt="Aurora Fashion Store – bespoke Shopify storefront with editorial layout" width="1200" height="700" loading="eager" /> -->
+            <article class="portfolio-card card-large reveal-left">
+              <div
+                class="image-placeholder ph-large"
+                role="img"
+                aria-label="Aurora Fashion Store project screenshot"
+              >
+                <div class="ph-inner">
+                  <span class="ph-icon">&#x1F6CD;&#xFE0F;</span>
+                  <strong>AURORA FASHION STORE</strong>
+                  <span
+                    >Hero shot of Shopify storefront — product grid, lifestyle
+                    imagery, editorial layout</span
+                  >
+                  <span class="ph-size">1200 × 700 px · JPG/WebP</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <div class="card-tags">
+                  <span class="tag">E-Commerce</span
+                  ><span class="tag">Shopify</span
+                  ><span class="tag">Custom Theme</span>
+                </div>
+                <h3>Aurora Fashion Store</h3>
+                <p>
+                  A fully bespoke Shopify theme delivering a luxury editorial
+                  feel with conversion-optimised UX and 140% increase in
+                  conversions.
+                </p>
+              </div>
+            </article>
+
+            <!-- Replace with: <img src="assets/imgs/project-nexus.jpg" alt="Nexus Analytics Platform – SaaS React dashboard with data visualisations" width="800" height="500" loading="lazy" /> -->
+            <article class="portfolio-card card-2 reveal-right">
+              <div
+                class="image-placeholder ph-medium"
+                role="img"
+                aria-label="Nexus Analytics Platform project screenshot"
+              >
+                <div class="ph-inner">
+                  <span class="ph-icon">&#x1F4CA;</span>
+                  <strong>NEXUS ANALYTICS</strong>
+                  <span
+                    >SaaS dashboard — data visualisations, charts, dark-mode
+                    UI</span
+                  >
+                  <span class="ph-size">800 × 500 px · JPG/WebP</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <div class="card-tags">
+                  <span class="tag">SaaS</span><span class="tag">React</span>
+                </div>
+                <h3>Nexus Analytics Platform</h3>
+                <p>
+                  Complex data visualisation platform built with React and a
+                  custom component library.
+                </p>
+              </div>
+            </article>
+
+            <!-- Row 2 — Full-width card, image left -->
+            <!-- Replace with: <img src="assets/imgs/project-bloom.jpg" alt="Bloom Health Clinic – brand identity and web design for London clinic" width="800" height="500" loading="lazy" /> -->
+            <article class="portfolio-card card-3 reveal-up">
+              <div
+                class="image-placeholder ph-medium"
+                role="img"
+                aria-label="Bloom Health Clinic project screenshot"
+              >
+                <div class="ph-inner">
+                  <span class="ph-icon">&#x1F33F;</span>
+                  <strong>BLOOM HEALTH CLINIC</strong>
+                  <span
+                    >Clinic website — warm brand identity, booking flow, calm
+                    green palette</span
+                  >
+                  <span class="ph-size">800 × 500 px · JPG/WebP</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <div class="card-tags">
+                  <span class="tag">Branding</span
+                  ><span class="tag">Web Design</span>
+                </div>
+                <h3>Bloom Health Clinic</h3>
+                <p>
+                  Brand identity and website for a London health clinic, built
+                  for trust and ease of booking. Patient enquiries increased 80%
+                  after launch.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="text-centre portfolio-more reveal-up">
+            <a href="#" class="btn btn-accent btn-lg">View All Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+      <section
+        class="section"
+        id="testimonials"
+        aria-labelledby="testimonialsHeading"
+      >
+        <div class="container">
+          <header class="section-header reveal-up">
+            <p class="eyebrow">Client Stories</p>
+            <h2 id="testimonialsHeading">Straight from the people we serve.</h2>
+          </header>
+
+          <div class="carousel-wrap">
+            <div class="carousel-viewport" aria-live="polite">
+              <div class="carousel-track" id="testimonialTrack">
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from Sarah Mitchell"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "OK WebStart transformed our online presence completely.
+                      The new Shopify store delivered a 140% increase in
+                      conversions within the first month. Their attention to
+                      detail and strategic thinking set them apart from every
+                      other agency we've worked with."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">SM</div>
+                    <div>
+                      <strong>Sarah Mitchell</strong>
+                      <span>CEO, Aurora Fashion</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from James Okonkwo"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "Building a complex analytics SaaS with a tight timeline
+                      felt daunting, but the OK WebStart team handled it with
+                      precision. The React architecture they designed is clean,
+                      scalable, and a joy to build upon. Truly exceptional
+                      technical talent."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">JO</div>
+                    <div>
+                      <strong>James Okonkwo</strong>
+                      <span>CTO, Nexus Analytics</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from Dr. Priya Sharma"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "From brand identity to the live website, OK WebStart
+                      delivered a cohesive, beautiful experience for our clinic.
+                      Patient enquiries increased by 80% after launch. Their
+                      transparent communication and post-launch support have
+                      been outstanding."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">PS</div>
+                    <div>
+                      <strong>Dr. Priya Sharma</strong>
+                      <span>Director, Bloom Health Clinic</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from Marcus Webb"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "We engaged OK WebStart for a full e-commerce overhaul and
+                      the results speak for themselves — revenue up 60% in Q1.
+                      Their team asked the right questions from day one and
+                      delivered a storefront that genuinely reflects our brand's
+                      premium positioning."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">MW</div>
+                    <div>
+                      <strong>Marcus Webb</strong>
+                      <span>Founder, Verve Home Goods</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from Aisha Mensah"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "The SEO strategy OK WebStart put in place took our
+                      organic traffic from near zero to over 12,000 monthly
+                      visitors in under six months. Their technical knowledge is
+                      second to none and the communication throughout was
+                      refreshingly straightforward."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">AM</div>
+                    <div>
+                      <strong>Aisha Mensah</strong>
+                      <span>Marketing Director, Clarite Legal</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article
+                  class="glass-card testimonial-card"
+                  aria-label="Testimonial from Tom Hadley"
+                >
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                  </div>
+                  <blockquote>
+                    <p>
+                      "I've worked with three agencies over five years — none
+                      came close to the standard OK WebStart set. They rebuilt
+                      our entire platform on Next.js and cut our page load time
+                      by 70%. The ongoing support retainer has been worth every
+                      penny."
+                    </p>
+                  </blockquote>
+                  <footer class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">TH</div>
+                    <div>
+                      <strong>Tom Hadley</strong>
+                      <span>CTO, Pulse Fintech</span>
+                    </div>
+                  </footer>
+                </article>
+              </div>
+            </div>
+
+            <div class="carousel-controls">
+              <button
+                class="carousel-btn"
+                id="prevBtn"
+                aria-label="Previous testimonial"
+              >
+                &#x2039;
+              </button>
+              <div
+                class="carousel-dots"
+                id="carouselDots"
+                role="tablist"
+                aria-label="Testimonial navigation"
+              ></div>
+              <button
+                class="carousel-btn"
+                id="nextBtn"
+                aria-label="Next testimonial"
+              >
+                &#x203A;
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CTA BANNER ─────────────────────────────────────────── -->
+      <section class="section cta-banner" aria-labelledby="ctaBannerHeading">
+        <div class="container">
+          <div class="cta-inner glass-card reveal-up">
+            <p class="eyebrow">Ready?</p>
+            <h2 id="ctaBannerHeading">
+              Your next chapter starts with a conversation.
+            </h2>
+            <a href="pages/contact.html" class="btn btn-accent btn-xl"
+              >Start Your Project</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand column -->
+          <div class="footer-brand">
+            <a
+              href="index.html"
+              class="logo"
+              aria-label="OK WebStart – return to homepage"
+            >
+              <img src="assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
+            </a>
+            <p class="footer-tagline">
+              Future-forward web development for ambitious brands.
+            </p>
+            <address class="footer-contact" aria-label="Contact information">
+              <a href="mailto:hello@okwebstart.com">hello@okwebstart.com</a>
+              <a href="tel:+441234567890">+44 (0) 1234 567 890</a>
+            </address>
+            <div class="social-links" aria-label="Social media profiles">
+              <a
+                href="https://linkedin.com/company/okwebstart"
+                class="social-btn"
+                aria-label="OK WebStart on LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://x.com/okwebstart"
+                class="social-btn"
+                aria-label="OK WebStart on X / Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com/okwebstart"
+                class="social-btn"
+                aria-label="OK WebStart on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://dribbble.com/okwebstart"
+                class="social-btn"
+                aria-label="OK WebStart on Dribbble"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 0 1 1.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 0 0-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0 1 12 3.475zm-3.633.803a53.896 53.896 0 0 1 3.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 0 1 4.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 0 1-2.19-5.705zM12 20.547a8.482 8.482 0 0 1-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 0 1 1.823 6.475 8.4 8.4 0 0 1-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 0 1-3.655 5.715z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Nav wrap — 2-col grid inside -->
+          <nav class="footer-nav-wrap" aria-label="Footer navigation">
+            <div class="footer-nav-col">
+              <h4>Services</h4>
+              <ul role="list">
+                <li><a href="pages/services.html">Web Development</a></li>
+                <li><a href="pages/services.html">UX / UI Design</a></li>
+                <li><a href="pages/services.html">SEO &amp; Growth</a></li>
+                <li><a href="pages/services.html">E-Commerce</a></li>
+                <li><a href="pages/services.html">Brand Strategy</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-col">
+              <h4>Company</h4>
+              <ul role="list">
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="footerYear"></span> OK WebStart Ltd. All rights
+            reserved.
+          </p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top of page">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        width="20"
+        height="20"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

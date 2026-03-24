@@ -1,0 +1,174 @@
+# OK WebStart — Agency Website
+
+> Future-forward web development for ambitious brands.
+
+---
+
+## 📁 Project Structure
+
+```
+TESTE-2.0/
+├── assets/
+│   ├── css/
+│   │   └── style.css          # Single shared stylesheet
+│   ├── imgs/
+│   │   └── LOGO-HEADER.png    # Header logo
+│   └── js/
+│       └── main.js            # Single shared JavaScript file
+├── pages/
+│   ├── about.html             # About page
+│   ├── contact.html           # Contact page
+│   └── services.html          # Services page
+├── index.html                 # Homepage (root)
+└── README.md                  # This file
+```
+
+---
+
+## 🎨 Design System
+
+| Token | Value |
+|---|---|
+| Main | `#010d5b` |
+| Accent | `#ffb000` |
+| Background | `#030d3e` |
+| Success / Green | `#10b981` |
+| Text | `#c9d1e9` |
+| Text Muted | `#7680a8` |
+
+**Fonts:** Syne (display/headings) + DM Sans (body) — loaded via Google Fonts.
+
+---
+
+## 📦 Dependencies (CDN — no install required)
+
+| Library | Version | Purpose |
+|---|---|---|
+| Lenis | `1.0.34` | Smooth scrolling |
+| ScrollReveal | `4.0.9` | Scroll entrance animations |
+| Google Fonts | — | Syne + DM Sans |
+
+No build tools. No npm. No bundler. Open `index.html` in a browser and it works.
+
+---
+
+## 🚀 How to Run
+
+**Option 1 — Direct open**
+Open `index.html` in any modern browser.
+
+**Option 2 — Live Server (recommended)**
+If you use VS Code, install the **Live Server** extension, right-click `index.html` and select "Open with Live Server". This gives you hot reload on save.
+
+**Option 3 — Any static host**
+Upload the entire `TESTE-2.0/` folder to Netlify, Vercel, or GitHub Pages.
+
+---
+
+## 🌐 Pages
+
+| Page | File | Description |
+|---|---|---|
+| Homepage | `index.html` | Hero, services, proof, process, portfolio, testimonials |
+| About | `pages/about.html` | Story, values, team, approach |
+| Services | `pages/services.html` | Full service details + pricing |
+| Contact | `pages/contact.html` | Channel cards, form, trust section |
+
+---
+
+## ⚙️ JavaScript Modules (`main.js`)
+
+| Function | Description |
+|---|---|
+| `initLenis()` | Smooth scroll via Lenis |
+| `initFloatingHeader()` | Header appears after 80px scroll |
+| `initMobileNav()` | Hamburger drawer open/close |
+| `initBackToTop()` | FAB button appears after 400px scroll |
+| `initScrollReveal()` | Entrance animations on scroll |
+| `initCounters()` | Animated number counters |
+| `initScrollSpy()` | Active nav link on scroll |
+| `initSmoothAnchors()` | Anchor links use Lenis |
+| `initFooterYear()` | Dynamic copyright year |
+| `initCursorGlow()` | Gold glow follows cursor (desktop only) |
+| `initCardTilt()` | 3D tilt on cards (desktop hover) |
+| `initTestimonialCarousel()` | Auto-play slider with swipe support |
+
+---
+
+## 🖼️ Replacing Image Placeholders
+
+All placeholder `<div>` slots include a comment with the exact `<img>` tag to use.
+
+Search for `image-placeholder` in any HTML file to find all slots.
+
+Example replacement:
+```html
+<!-- Before -->
+<div class="image-placeholder port-img-ph" role="img" aria-label="...">
+  ...
+</div>
+
+<!-- After -->
+<img src="../assets/imgs/project-aurora.jpg"
+     alt="Aurora Fashion Store homepage"
+     width="1200" height="700"
+     loading="lazy" />
+```
+
+Recommended formats: **WebP** (best) or JPG. SVG for logos.
+
+---
+
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Target |
+|---|---|
+| No query (base) | Mobile — 320px+ |
+| `max-width: 1024px` | Tablet |
+| `max-width: 900px` | Navigation collapse |
+| `max-width: 640px` | Mobile overrides |
+| `max-width: 380px` | Very small screens |
+
+---
+
+## 🔗 Internal Link Reference
+
+When linking between pages, use these paths:
+
+**From `index.html` (root):**
+```html
+<a href="pages/about.html">About</a>
+<a href="pages/services.html">Services</a>
+<a href="pages/contact.html">Contact</a>
+```
+
+**From `pages/*.html`:**
+```html
+<a href="../index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+```
+
+---
+
+## ✅ Deployment Checklist
+
+Before going live:
+
+- [ ] Replace all image placeholders with real images
+- [ ] Update `hello@okwebstart.com` with real email
+- [ ] Update `+44 (0) 1234 567 890` with real phone
+- [ ] Update all social media links
+- [ ] Replace `https://www.okwebstart.com` with real domain in all canonical/OG tags
+- [ ] Add real `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`
+- [ ] Create `site.webmanifest` for PWA support
+- [ ] Create `og-image.jpg` (1200×630px) for social sharing
+- [ ] Test on Chrome, Safari, Firefox and mobile devices
+- [ ] Run Lighthouse audit (target: 90+ on all categories)
+
+---
+
+## 📄 Licence
+
+© 2024 OK WebStart Ltd. All rights reserved.

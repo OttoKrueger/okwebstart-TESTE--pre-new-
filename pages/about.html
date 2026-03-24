@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | OK WebStart – Web Development Agency</title>
+  <meta name="description" content="Meet the team behind OK WebStart — a London-based web development agency built by builders, driven by results. Our story, values, and approach." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://okwebstart.com/pages/about.html" />
+  <meta name="theme-color" content="#010d5b" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Us | OK WebStart – Web Development Agency" />
+  <meta property="og:description" content="Meet the team behind OK WebStart — built by builders, driven by results. Our story, values, and approach to web development." />
+  <meta property="og:image" content="https://okwebstart.com/assets/imgs/og-about.jpg" />
+  <meta property="og:url" content="https://okwebstart.com/pages/about.html" />
+  <meta property="og:site_name" content="OK WebStart" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | OK WebStart – Web Development Agency" />
+  <meta name="twitter:description" content="Built by builders, driven by results. Discover our story and values." />
+  <meta name="twitter:image" content="https://okwebstart.com/assets/imgs/og-about.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://okwebstart.com/pages/about.html#webpage",
+        "url": "https://okwebstart.com/pages/about.html",
+        "name": "About Us | OK WebStart – Web Development Agency",
+        "isPartOf": { "@id": "https://okwebstart.com/#website" },
+        "description": "About OK WebStart — our story, values, and approach to building high-performance web experiences."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okwebstart.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://okwebstart.com/pages/about.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       FLOATING HEADER
+  ============================================================ -->
+  <header id="siteHeader" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="OK WebStart – return to homepage">
+        <img src="../assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
+      </a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="../index.html#portfolio" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-accent btn-sm header-cta" aria-label="Start a project with OK WebStart">Start a Project</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE NAV DRAWER
+  ============================================================ -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+    <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">&#x2715;</button>
+    <ul class="drawer-nav" role="list">
+      <li><a href="../index.html" class="drawer-link">Home</a></li>
+      <li><a href="services.html" class="drawer-link">Services</a></li>
+      <li><a href="../index.html#portfolio" class="drawer-link">Work</a></li>
+      <li><a href="about.html" class="drawer-link">About</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-accent btn-lg drawer-cta">Start a Project</a>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main role="main">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero hero--inner section" id="hero" aria-labelledby="aboutHeroHeading">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="container hero-inner-content">
+        <p class="eyebrow reveal-up">Our Story</p>
+        <h1 id="aboutHeroHeading" class="reveal-up" style="--delay: 0.1s">Built by Builders.<br />Driven by Results.</h1>
+        <p class="hero-sub hero-sub--centred reveal-up" style="--delay: 0.2s">
+          OK WebStart was founded in 2024 with a single belief: that great digital work is born from equal parts craft and strategy.
+          We don't just build websites — we build growth engines for ambitious brands.
+        </p>
+        <div class="hero-ctas hero-ctas--centred reveal-up" style="--delay: 0.3s">
+          <a href="contact.html" class="btn btn-accent btn-lg">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OUR STORY ─────────────────────────────────────────── -->
+    <section class="section" id="our-story" aria-labelledby="storyHeading">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Text column -->
+          <div class="story-text reveal-left">
+            <p class="eyebrow">Who We Are</p>
+            <h2 id="storyHeading">A studio built on craft and conviction.</h2>
+            <p>OK WebStart was born out of frustration with the status quo. Too many agencies were shipping cookie-cutter websites, prioritising aesthetics over outcomes, and disappearing after launch. We set out to do things differently — with rigour, honesty, and a genuine obsession with results.</p>
+            <p>Founded in London in 2024, we're a tight-knit team of developers, designers, and strategists who believe that the web is still the most powerful business tool in the world — when it's done right. We combine technical excellence with conversion-focused thinking to create digital experiences that genuinely move the needle for our clients.</p>
+            <p>Every engagement begins with listening. We immerse ourselves in your brand, your market, and your goals before a single line of code is written. That's not a process quirk — it's the reason our clients stay with us, and the reason our work consistently outperforms expectations.</p>
+            <p>We're selective about who we partner with, because we're committed to doing exceptional work — not just completing projects. If you're an ambitious brand ready to invest in your digital future, we'd love to hear from you.</p>
+          </div>
+
+          <!-- Stat cards (2×2 grid) -->
+          <div class="story-stats reveal-right">
+            <div class="stats-grid stats-grid--2col">
+              <div class="glass-card stat-card">
+                <span class="stat-num text-gradient" data-target="150" data-suffix="+">0</span>
+                <p class="stat-label">Projects Launched</p>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-num text-gradient" data-target="98" data-suffix="%">0</span>
+                <p class="stat-label">Client Retention</p>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-num text-gradient" data-target="40" data-suffix="+">0</span>
+                <p class="stat-label">Industries Served</p>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-num text-gradient" data-target="5" data-suffix="&#x2605;">0</span>
+                <p class="stat-label">Avg. Client Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VALUES ─────────────────────────────────────────────── -->
+    <section class="section section--dark-alt" id="values" aria-labelledby="valuesHeading">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <p class="eyebrow">What We Stand For</p>
+          <h2 id="valuesHeading">Principles we won't compromise on.</h2>
+        </header>
+        <div class="bento-grid bento-grid--3">
+
+          <div class="bento-card glass-card reveal-up" style="--delay: 0s">
+            <span class="bento-icon" aria-hidden="true">&#x1F3AF;</span>
+            <h3>Outcomes over outputs</h3>
+            <p>We don't measure success by deliverables. We measure it by whether your business grew, your conversions improved, or your brand became stronger. Every decision we make is anchored to your real-world results — not arbitrary milestones.</p>
+          </div>
+
+          <div class="bento-card glass-card reveal-up" style="--delay: 0.15s">
+            <span class="bento-icon" aria-hidden="true">&#x26A1;</span>
+            <h3>Speed without compromise</h3>
+            <p>We move fast — but never at the expense of quality. Our agile process and reusable systems let us deliver production-ready work at a pace that surprises clients, while our standards ensure nothing ever ships below par.</p>
+          </div>
+
+          <div class="bento-card glass-card reveal-up" style="--delay: 0.3s">
+            <span class="bento-icon" aria-hidden="true">&#x1F91D;</span>
+            <h3>Radical transparency</h3>
+            <p>No hidden costs, no vague timelines, no smoke and mirrors. You'll always know exactly where your project stands, what it costs, and why we're making every decision. Trust is built one honest conversation at a time.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── APPROACH / WHY US ──────────────────────────────────── -->
+    <section class="section" id="approach" aria-labelledby="approachHeading">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <p class="eyebrow">Why OK WebStart</p>
+          <h2 id="approachHeading">What makes us different.</h2>
+        </header>
+
+        <!-- Point 1: Strategy first -->
+        <div class="alt-block alt-block--odd reveal-up">
+          <div class="alt-text">
+            <span class="alt-num" aria-hidden="true">01</span>
+            <h3>We start with strategy, not aesthetics.</h3>
+            <p>Beautiful design that doesn't convert is expensive decoration. Before we touch a pixel, we conduct deep research into your audience, competitors, and conversion pathways. Our design process is hypothesis-driven — every layout, colour, and copy direction is informed by data and validated against your goals.</p>
+            <p>This is why our sites don't just look good — they perform. Clients who switch to us from other agencies almost always see measurable improvement within the first 90 days.</p>
+          </div>
+          <div class="alt-visual glass-card" aria-hidden="true">
+            <div class="alt-visual-inner">
+              <div class="alt-stat-row">
+                <span class="alt-stat-num text-gradient">3x</span>
+                <p>average ROI improvement when projects begin with strategic discovery</p>
+              </div>
+              <div class="alt-checklist">
+                <span>&#x2714; Audience research</span>
+                <span>&#x2714; Competitor analysis</span>
+                <span>&#x2714; Conversion mapping</span>
+                <span>&#x2714; Goal-aligned design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Point 2: Performance -->
+        <div class="alt-block alt-block--even reveal-up">
+          <div class="alt-visual glass-card" aria-hidden="true">
+            <div class="alt-visual-inner alt-visual-inner--ring">
+              <div class="alt-ring-container">
+                <svg class="alt-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-bg" cx="60" cy="60" r="50" />
+                  <circle class="ring-fill-gold" cx="60" cy="60" r="50" style="--pct: 0.97" />
+                </svg>
+                <div class="alt-ring-label">
+                  <span class="alt-ring-num">97</span>
+                  <span class="alt-ring-sub">Lighthouse</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alt-text">
+            <span class="alt-num" aria-hidden="true">02</span>
+            <h3>We build for performance — Lighthouse 97+.</h3>
+            <p>Page speed isn't a nice-to-have. Every 100ms of load time costs conversions. We engineer every site to achieve Lighthouse scores of 97 or above, with server-side rendering, optimised assets, efficient caching, and lean code as our baseline — not an afterthought.</p>
+            <p>When Google rewards fast sites with higher rankings, and users abandon anything that loads in over three seconds, performance is a business decision as much as a technical one.</p>
+          </div>
+        </div>
+
+        <!-- Point 3: Post-launch -->
+        <div class="alt-block alt-block--odd reveal-up">
+          <div class="alt-text">
+            <span class="alt-num" aria-hidden="true">03</span>
+            <h3>We stay after launch.</h3>
+            <p>Most agencies disappear the moment the site goes live. We believe the launch is the beginning, not the end. Our partnerships typically continue well beyond the initial build — with ongoing performance monitoring, A/B testing, SEO growth, and iterative improvements that compound over time.</p>
+            <p>Our 98% client retention rate isn't an accident. It's the result of genuinely caring about your long-term success and being the kind of partner you actually want to call when something matters.</p>
+          </div>
+          <div class="alt-visual glass-card" aria-hidden="true">
+            <div class="alt-visual-inner">
+              <div class="alt-stat-row">
+                <span class="alt-stat-num text-gradient">98%</span>
+                <p>of clients continue working with us after the initial project</p>
+              </div>
+              <div class="alt-checklist">
+                <span>&#x2714; Post-launch support</span>
+                <span>&#x2714; Performance monitoring</span>
+                <span>&#x2714; A/B testing &amp; iteration</span>
+                <span>&#x2714; SEO growth programme</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ─────────────────────────────────────────── -->
+    <section class="section cta-banner" aria-labelledby="aboutCtaHeading">
+      <div class="container">
+        <div class="cta-inner glass-card reveal-up">
+          <p class="eyebrow">Ready?</p>
+          <h2 id="aboutCtaHeading">Your next chapter starts with a conversation.</h2>
+          <a href="contact.html" class="btn btn-accent btn-xl">Start Your Project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="OK WebStart – return to homepage">
+            <img src="../assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
+          </a>
+          <p class="footer-tagline">Future-forward web development for ambitious brands.</p>
+          <address class="footer-contact" aria-label="Contact information">
+            <a href="mailto:hello@okwebstart.com">hello@okwebstart.com</a>
+            <a href="tel:+441234567890">+44 (0) 1234 567 890</a>
+          </address>
+          <div class="social-links" aria-label="Social media profiles">
+            <a href="https://linkedin.com/company/okwebstart" class="social-btn" aria-label="OK WebStart on LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://x.com/okwebstart" class="social-btn" aria-label="OK WebStart on X / Twitter" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/okwebstart" class="social-btn" aria-label="OK WebStart on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            </a>
+            <a href="https://dribbble.com/okwebstart" class="social-btn" aria-label="OK WebStart on Dribbble" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 0 1 1.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 0 0-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0 1 12 3.475zm-3.633.803a53.896 53.896 0 0 1 3.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 0 1 4.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 0 1-2.19-5.705zM12 20.547a8.482 8.482 0 0 1-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 0 1 1.823 6.475 8.4 8.4 0 0 1-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 0 1-3.655 5.715z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav-wrap" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h4>Services</h4>
+            <ul role="list">
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">UX / UI Design</a></li>
+              <li><a href="services.html">SEO &amp; Growth</a></li>
+              <li><a href="services.html">E-Commerce</a></li>
+              <li><a href="services.html">Brand Strategy</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Company</h4>
+            <ul role="list">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="../index.html#portfolio">Portfolio</a></li>
+              <li><a href="../index.html#process">Process</a></li>
+              <li><a href="../index.html#testimonials">Testimonials</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> OK WebStart Ltd. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
