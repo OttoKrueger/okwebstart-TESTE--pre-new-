@@ -71,17 +71,12 @@
       <a href="../index.html" class="logo" aria-label="OK WebStart – return to homepage">
         <img src="../assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
       </a>
-      <nav class="header-nav" aria-label="Primary navigation">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="../index.html#portfolio" class="nav-link">Work</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-      <a href="contact.html" class="btn btn-accent btn-sm header-cta" aria-label="Start a project with OK WebStart">Start a Project</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-outline btn-sm">Get in Touch</a>
+        <button class="btn btn-accent btn-sm" id="hamburgerBtn"
+          aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">Menu</button>
+      </div>
     </div>
   </header>
 
@@ -90,7 +85,6 @@
   ============================================================ -->
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
   <nav id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
-    <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">&#x2715;</button>
     <ul class="drawer-nav" role="list">
       <li><a href="../index.html" class="drawer-link">Home</a></li>
       <li><a href="services.html" class="drawer-link">Services</a></li>

@@ -55,6 +55,10 @@ function initMobileNav() {
     backdrop.classList.add('open');
     btn.classList.add('open');
     btn.setAttribute('aria-expanded', 'true');
+    if (btn.textContent.trim() === 'Menu') {
+      btn.textContent = 'Close';
+      btn.setAttribute('aria-label', 'Close navigation menu');
+    }
     document.body.style.overflow = 'hidden';
     closeBtn && closeBtn.focus();
   }
@@ -64,6 +68,10 @@ function initMobileNav() {
     backdrop.classList.remove('open');
     btn.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
+    if (btn.textContent.trim() === 'Close') {
+      btn.textContent = 'Menu';
+      btn.setAttribute('aria-label', 'Open navigation menu');
+    }
     document.body.style.overflow = '';
     btn.focus();
   }
