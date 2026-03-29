@@ -6,6 +6,11 @@
 /* ── 1. RESET & BASE ──────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -899,9 +904,12 @@ p + p { margin-top: var(--space-sm); }
 /* ── 20. PORTFOLIO GRID ───────────────────────────────────── */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
+}
+
+@media (max-width: 640px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
 
 .portfolio-card {
@@ -917,23 +925,24 @@ p + p { margin-top: var(--space-sm); }
   border-color: rgba(255,176,0,0.3);
 }
 
-.card-large { grid-column: 1; grid-row: 1; }
-.card-2     { grid-column: 2; grid-row: 1; }
-.card-3     {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  display: flex;
-  flex-direction: row;
-}
-.card-3 .image-placeholder { flex: 1; }
-.card-3 .card-info { flex: 1; padding: var(--space-lg); display: flex; flex-direction: column; justify-content: center; }
-
 .card-info { padding: var(--space-md); }
 .card-info h3 { font-size: var(--fs-lg); margin-bottom: 0.4rem; }
 .card-info p { font-size: var(--fs-sm); color: var(--color-text); max-width: none; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.6rem; }
 
 .portfolio-more { margin-top: var(--space-2xl); }
+
+.portfolio-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+.portfolio-card:hover .portfolio-img { transform: scale(1.04); }
+
+@media (max-width: 640px) {
+  .portfolio-img { height: 200px; }
+}
 
 /* ── 21. IMAGE PLACEHOLDERS ──────────────────────────────────*/
 .image-placeholder {
@@ -1819,12 +1828,6 @@ textarea { resize: vertical; min-height: 140px; }
   .pricing-grid  { grid-template-columns: repeat(2, 1fr); }
   .pricing-card--featured { transform: none; }
 
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .card-large, .card-2, .card-3 { grid-column: auto; grid-row: auto; }
-  .card-3 { flex-direction: column; }
-  .card-3 .image-placeholder { min-height: 240px; }
-  .card-3 .card-info { padding: var(--space-md); }
-
   .process-steps { flex-wrap: wrap; gap: var(--space-md); }
   .process-step { flex: 1 1 calc(50% - var(--space-md)); min-width: 200px; }
   .process-arrow { display: none; }
@@ -1916,9 +1919,6 @@ textarea { resize: vertical; min-height: 140px; }
   .trust-grid    { grid-template-columns: 1fr; }
   .contact-channels-grid { grid-template-columns: 1fr; }
   .form-grid     { grid-template-columns: 1fr; }
-
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .card-3 { flex-direction: column; }
 
   .story-grid { grid-template-columns: 1fr; }
   .story-stats { position: static; }
