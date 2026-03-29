@@ -464,7 +464,6 @@ function init() {
   initSmoothAnchors();
   initFooterYear();
   initCursorGlow();
-  initCardTilt();
   initTestimonialCarousel();
 }
 
