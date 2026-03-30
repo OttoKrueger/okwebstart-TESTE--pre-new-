@@ -113,7 +113,7 @@ address { font-style: normal; }
 
 /* ── 3. TYPOGRAPHY ────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Clash Display', 'Syne', system-ui, sans-serif;
+  font-family: 'Syne', system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-white);
@@ -161,14 +161,14 @@ p, span, a, li {
 
 /* Eyebrow label */
 .eyebrow {
-  font-family: 'Clash Display', 'Syne', system-ui, sans-serif;
+  font-family: 'Syne', system-ui, sans-serif;
   font-size: var(--fs-sm);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--color-accent);
   margin-bottom: var(--space-sm);
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -200,7 +200,7 @@ p, span, a, li {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: 'Clash Display', 'Syne', system-ui, sans-serif;
+  font-family: 'Syne', system-ui, sans-serif;
   font-weight: 600;
   font-size: var(--fs-sm);
   border-radius: var(--radius-full);
@@ -462,9 +462,7 @@ p, span, a, li {
   margin-bottom: var(--space-sm);
   font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   line-height: 1.15;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  text-wrap: balance; /* browser balances line lengths automatically */
+  text-wrap: balance;
 }
 
 .hero-sub {
@@ -482,6 +480,10 @@ p, span, a, li {
   gap: var(--space-md);
   flex-wrap: wrap;
   justify-content: center;
+}
+.hero-ctas .btn {
+  flex: 1 1 0;
+  max-width: 14rem;
 }
 
 /* Hero stats strip */
@@ -504,7 +506,7 @@ p, span, a, li {
   backdrop-filter: blur(12px);
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-full);
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-base);
   font-weight: 700;
   color: var(--color-text);
@@ -542,7 +544,7 @@ p, span, a, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-xl);
   font-weight: 800;
   color: var(--color-white);
@@ -578,7 +580,7 @@ p, span, a, li {
   width: max-content;
 }
 .marquee-track span {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--color-text-muted);
@@ -652,7 +654,7 @@ p, span, a, li {
 }
 .stat-num {
   display: block;
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1;
@@ -694,7 +696,7 @@ p, span, a, li {
 }
 .logo-strip-item:hover { opacity: 1; filter: grayscale(0); }
 .logo-strip-item span {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--color-text-muted);
@@ -719,7 +721,7 @@ p, span, a, li {
   flex-direction: column;
 }
 .step-num {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-3xl);
   font-weight: 800;
   color: rgba(255,176,0,0.18);
@@ -814,7 +816,7 @@ p, span, a, li {
   margin-bottom: 0.25rem;
 }
 .ph-inner strong {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--color-accent);
@@ -875,7 +877,7 @@ p, span, a, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-xs);
   font-weight: 700;
   color: var(--color-accent);
@@ -941,100 +943,6 @@ p, span, a, li {
 }
 .cta-inner .eyebrow { justify-content: center; }
 .cta-inner h2 { margin-bottom: var(--space-lg); max-width: none; }
-
-/* ── 24. FOOTER ───────────────────────────────────────────── */
-.site-footer {
-  border-top: 1px solid rgba(255,176,0,0.08);
-  padding-block: var(--space-2xl) var(--space-lg);
-  background: rgba(1,13,91,0.25);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: var(--space-2xl);
-  margin-bottom: var(--space-xl);
-}
-.footer-brand { display: flex; flex-direction: column; gap: var(--space-sm); }
-.footer-brand .logo { height: 32px; }
-.footer-tagline {
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  max-width: 32ch;
-}
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-.footer-contact a {
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast);
-}
-.footer-contact a:hover { color: var(--color-accent); }
-
-.social-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.social-btn {
-  width: 36px; height: 36px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255,255,255,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
-}
-.social-btn:hover {
-  color: var(--color-accent);
-  border-color: rgba(255,176,0,0.4);
-  background: rgba(255,176,0,0.06);
-}
-
-/* Footer nav wrap — 2-col grid inside the footer */
-.footer-nav-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-}
-.footer-nav-col h4 {
-  font-family: 'Clash Display', 'Syne', sans-serif;
-  font-size: var(--fs-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-white);
-  margin-bottom: var(--space-sm);
-}
-.footer-nav-col ul { display: flex; flex-direction: column; gap: 0.4rem; }
-.footer-nav-col a {
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast);
-}
-.footer-nav-col a:hover { color: var(--color-accent); }
-
-/* Footer bottom bar */
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding-top: var(--space-md);
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-.footer-bottom p {
-  font-size: var(--fs-xs);
-  color: var(--color-text-muted);
-  max-width: none;
-}
-.legal-links { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
-.legal-links a {
-  font-size: var(--fs-xs);
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast);
-}
-.legal-links a:hover { color: var(--color-accent); }
 
 /* ── 25. INNER PAGE HERO ──────────────────────────────────── */
 .hero--inner {
@@ -1105,7 +1013,7 @@ p, span, a, li {
 
 .alt-num {
   display: block;
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-4xl);
   font-weight: 800;
   color: rgba(255,176,0,0.12);
@@ -1141,7 +1049,7 @@ p, span, a, li {
   justify-content: center;
 }
 .alt-ring-num {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-3xl);
   font-weight: 800;
   color: var(--color-white);
@@ -1156,7 +1064,7 @@ p, span, a, li {
 
 .alt-stat-row { display: flex; flex-direction: column; }
 .alt-stat-num {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-4xl);
   font-weight: 800;
   line-height: 1;
@@ -1280,7 +1188,7 @@ p, span, a, li {
   margin-top: var(--space-sm);
 }
 .metric-val {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-3xl);
   font-weight: 800;
   line-height: 1;
@@ -1357,7 +1265,7 @@ p, span, a, li {
 .ecom-stat { text-align: center; }
 .ecom-val {
   display: block;
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-xl);
   font-weight: 800;
   line-height: 1;
@@ -1395,7 +1303,7 @@ p, span, a, li {
   gap: 0.25rem;
 }
 .brand-type-lg {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-4xl);
   font-weight: 800;
   color: var(--color-white);
@@ -1433,7 +1341,7 @@ p, span, a, li {
   transform: translateX(-50%);
   background: var(--color-accent);
   color: var(--color-main);
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -1450,7 +1358,7 @@ p, span, a, li {
   margin-bottom: var(--space-sm);
 }
 .pricing-tier {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 700;
   text-transform: uppercase;
@@ -1460,7 +1368,7 @@ p, span, a, li {
 .pricing-amount { display: flex; align-items: baseline; gap: 0.35rem; }
 .pricing-from { font-size: var(--fs-xs); color: var(--color-text-muted); }
 .pricing-price {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-2xl);
   font-weight: 800;
   color: var(--color-white);
@@ -1541,7 +1449,7 @@ p, span, a, li {
   flex: 1;
 }
 .channel-label {
-  font-family: 'Clash Display', 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: var(--fs-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -1781,7 +1689,6 @@ textarea { resize: vertical; min-height: 140px; }
   .footer-tagline { text-align: center; max-width: none; }
   .social-links { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .legal-links { justify-content: center; }
 
   .back-to-top { width: 44px; height: 44px; bottom: 1.25rem; right: 1.25rem; }
 

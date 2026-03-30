@@ -14,7 +14,7 @@ class Header extends HTMLElement {
                 <img src="/assets/imgs/LOGO-HEADER.png" alt="OK WebStart" />
                 </a>
                 <div class="header-right">
-                <a href="pages/contact.html" class="btn btn-outline btn-sm"
+                <a href="/pages/contact.html" class="btn btn-outline btn-sm"
                     >Get in Touch</a
                 >
                 <button
@@ -42,11 +42,11 @@ class Header extends HTMLElement {
             aria-label="Mobile navigation menu"
             >
             <ul class="drawer-nav" role="list">
-                <li><a href="index.html" class="drawer-link">Home</a></li>
-                <li><a href="pages/services.html" class="drawer-link">Services</a></li>
-                <li><a href="#portfolio" class="drawer-link">Work</a></li>
-                <li><a href="pages/about.html" class="drawer-link">About</a></li>
-                <li><a href="pages/contact.html" class="drawer-link">Contact</a></li>
+                <li><a href="/index.html" class="drawer-link">Home</a></li>
+                <li><a href="/pages/services.html" class="drawer-link">Services</a></li>
+                <li><a href="/#portfolio" class="drawer-link">Work</a></li>
+                <li><a href="/pages/about.html" class="drawer-link">About</a></li>
+                <li><a href="/pages/contact.html" class="drawer-link">Contact</a></li>
             </ul>
             <a href="pages/contact.html" class="btn btn-accent btn-lg drawer-cta"
                 >Start a Project</a

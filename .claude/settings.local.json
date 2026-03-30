@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"Clash Display\" index.html pages/*.html)"
+    ]
+  }
+}
