@@ -156,11 +156,11 @@ function initCounters() {
   }
 
   function animateCounter(el) {
-    const target  = parseFloat(el.dataset.target);
-    const suffix  = el.dataset.suffix || '';
-    const isFloat = el.dataset.float === 'true';
+    const target   = parseFloat(el.dataset.target);
+    const suffix   = el.dataset.suffix || '';
+    const isFloat  = el.dataset.float === 'true';
     const duration = 1800;
-    let startTime = null;
+    let startTime  = null;
 
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
@@ -264,7 +264,7 @@ function initCursorGlow() {
   glow.setAttribute('aria-hidden', 'true');
   document.body.appendChild(glow);
 
-  let rafId = null;
+  let rafId  = null;
   let mouseX = -250, mouseY = -250;
 
   document.addEventListener('mousemove', function (e) {
@@ -286,174 +286,32 @@ function initCardTilt() {
   if (window.matchMedia('(hover: none)').matches) return;
 
   const MAX_DEG = 4;
-  const cards = document.querySelectorAll('.bento-card, .portfolio-card, .testimonial-card');
+  const cards   = document.querySelectorAll('.bento-card, .portfolio-card');
 
   cards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width  / 2;
-      const cy = rect.top  + rect.height / 2;
-      const dx = (e.clientX - cx) / (rect.width  / 2);
-      const dy = (e.clientY - cy) / (rect.height / 2);
+      const rect    = card.getBoundingClientRect();
+      const cx      = rect.left + rect.width  / 2;
+      const cy      = rect.top  + rect.height / 2;
+      const dx      = (e.clientX - cx) / (rect.width  / 2);
+      const dy      = (e.clientY - cy) / (rect.height / 2);
       const rotateX = -dy * MAX_DEG;
       const rotateY =  dx * MAX_DEG;
 
-      card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateZ(6px)';
+      card.style.transform  = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateZ(6px)';
       card.style.transition = 'transform 0.1s ease';
     });
 
     card.addEventListener('mouseleave', function () {
-      card.style.transform = '';
+      card.style.transform  = '';
       card.style.transition = 'transform 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease';
     });
   });
 }
 
-/* ── 12. initTestimonialCarousel ──────────────────────────── */
-function initTestimonialCarousel() {
-  const track   = document.getElementById('testimonialTrack');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const dotsWrap = document.getElementById('carouselDots');
-
-  if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
-
-  const cards   = Array.from(track.children);
-  const total   = cards.length;
-  let current   = 0;
-  let autoplayTimer = null;
-
-  function visibleCount() {
-    if (window.innerWidth <= 640)  return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 3;
-  }
-
-  function getGap() {
-    const gapStr = getComputedStyle(track).gap;
-    return parseFloat(gapStr) || 0;
-  }
-
-  // Uses offsetWidth — NOT getBoundingClientRect() to avoid mobile zero-width bug
-  function setCardWidths() {
-    const visible = visibleCount();
-    const gap = getGap();
-    const viewportWidth = track.parentElement.offsetWidth;
-    const cardWidth = (viewportWidth - (gap * (visible - 1))) / visible;
-    cards.forEach(function (card) {
-      card.style.width = cardWidth + 'px';
-      card.style.flexShrink = '0';
-    });
-  }
-
-  function pageCount() {
-    return Math.max(1, total - visibleCount() + 1);
-  }
-
-  function buildDots() {
-    dotsWrap.innerHTML = '';
-    const pages = pageCount();
-    for (let i = 0; i < pages; i++) {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot' + (i === current ? ' active' : '');
-      dot.setAttribute('role', 'tab');
-      dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-      dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
-      dot.addEventListener('click', function () {
-        goTo(i);
-        resetAutoplay();
-      });
-      dotsWrap.appendChild(dot);
-    }
-  }
-
-  function updateDots() {
-    const dots = dotsWrap.querySelectorAll('.carousel-dot');
-    dots.forEach(function (dot, i) {
-      dot.classList.toggle('active', i === current);
-      dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
-    });
-  }
-
-  function goTo(index) {
-    const max = Math.max(0, total - visibleCount());
-    // Infinite wrap-around
-    if (index < 0) {
-      current = max;
-    } else if (index > max) {
-      current = 0;
-    } else {
-      current = index;
-    }
-
-    const cardWidth = cards[0] ? cards[0].offsetWidth : 0;
-    const gap = getGap();
-    const offset = current * (cardWidth + gap);
-
-    track.style.transform = 'translateX(-' + offset + 'px)';
-    updateDots();
-  }
-
-  function resetAutoplay() {
-    clearInterval(autoplayTimer);
-    autoplayTimer = setInterval(function () {
-      goTo(current + 1);
-    }, 5000);
-  }
-
-  prevBtn.addEventListener('click', function () {
-    goTo(current - 1);
-    resetAutoplay();
-  });
-  nextBtn.addEventListener('click', function () {
-    goTo(current + 1);
-    resetAutoplay();
-  });
-
-  // Touch / swipe support
-  let touchStartX = 0;
-  let touchEndX   = 0;
-
-  track.addEventListener('touchstart', function (e) {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  track.addEventListener('touchend', function (e) {
-    touchEndX = e.changedTouches[0].screenX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        goTo(current + 1);
-      } else {
-        goTo(current - 1);
-      }
-      resetAutoplay();
-    }
-  }, { passive: true });
-
-  // Rebuild on resize
-  let resizeTimer;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-      setCardWidths();
-      buildDots();
-      goTo(0);
-    }, 150);
-  });
-
-  // Defer first paint so offsetWidth is available after layout
-  requestAnimationFrame(function () {
-    setCardWidths();
-    buildDots();
-    goTo(0);
-    resetAutoplay();
-  });
-}
-
 /* ── INIT ─────────────────────────────────────────────────── */
 function init() {
-  document.body.style.overflow = ''; // clear any lingering scroll lock
+  document.body.style.overflow = '';
   initLenis();
   initFloatingHeader();
   initMobileNav();
@@ -464,7 +322,7 @@ function init() {
   initSmoothAnchors();
   initFooterYear();
   initCursorGlow();
-  initTestimonialCarousel();
+  initCardTilt();
 }
 
 if (document.readyState === 'loading') {
